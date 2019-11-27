@@ -13,7 +13,7 @@ async function readImage(path) {
 async function detect() {
     let labels = ['Vicente', 'Sebastian', 'Paulo'];
     let model = await tf.loadLayersModel('file://model/model.json');
-   // model.summary();
+    model.summary();
     tfimage = await readImage('images/grande.png');
     console.log(tfimage);
     tfimage = tfimage.div(255.0)
